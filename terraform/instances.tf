@@ -7,6 +7,8 @@ resource "digitalocean_droplet" "controller" {
 	private_networking = true
 	monitoring = true
 
+  tags = ["${digitalocean_tag.controller.id}"]
+
 	count = 3
 
 }
@@ -19,6 +21,8 @@ resource "digitalocean_droplet" "worker" {
   ssh_keys = [ "12701380" ]
 	private_networking = true
 	monitoring = true
+
+  tags = ["${digitalocean_tag.worker.id}"]
 
 	count = 3
 
