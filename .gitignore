@@ -10,3 +10,4 @@ terraform.*
 *.log
 .vagrant/
 .kitchen/
+bin/
